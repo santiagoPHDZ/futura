@@ -5,7 +5,8 @@ import { Metadata } from "next"
 
 // Metadata
 export const metadata: Metadata = {
-    title: 'Sant Padilla',
+    title: 'FUTURA',
+    description: 'We belive in the future'
 }
 
 const Layout = ({ children }: { children: React.ReactNode }) => {
