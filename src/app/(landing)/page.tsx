@@ -1,6 +1,6 @@
 
 import Projects from "@/components/landing/projects";
-import { getProjects } from "@/server/services/content/projects";
+import { getProjects } from "@/server/services/projects";
 
 const Page = async () => {
 

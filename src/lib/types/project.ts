@@ -1,8 +1,13 @@
 
 export interface ProjectType {
-   id: string;
-  slug: string;
+  id: string;
   title: string;
-  content: string;
-  cover_image: string;
+  content?: string; // If it's rich text JSON, change this to Document
+  cover_image?: ImageType;
+}
+
+export interface ImageType {
+  url: string;
+  width: number;
+  height: number;
 }
