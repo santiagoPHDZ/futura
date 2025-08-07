@@ -10,7 +10,6 @@ import { ThemeToggle } from "./theme-toggle"
 import { usePathname } from "next/navigation"
 import { motion } from 'framer-motion';
 import { cn } from "@/lib/utils"
-import { PROJECTS } from "@/lib/projects"
 
 const ROUTES = [
     {
@@ -48,7 +47,7 @@ const NavBar = () => {
                             alt="SANT PADILLA"
                             width={396}
                             height={105}
-                            className="h-5 w-auto"
+                            className="h-4 w-auto"
                         />
                     </Link>
 
