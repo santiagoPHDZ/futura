@@ -10,13 +10,8 @@ export const projectsRouter = createTRPCRouter({
         return projects;
     }),
 
-    getById: publicProcedure
-        .input((id: unknown) => {
-            if (typeof id !== 'string') throw new Error('Invalid id');
-            return id;
-        })
-        .query(async ({ input }) => {
-            const project = await getProjectById(input);
+    getById: publicProcedure.input(z.object({ id: z.string() })).query(async ({ input }) => {
+            const project = await getProjectById(input.id);
             if (!project) throw new Error('Project not found');
             return project;
         }),

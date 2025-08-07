@@ -3,6 +3,8 @@ import Image from "next/image";
 import type { Metadata } from "next";
 import { getProjectById } from "@/server/services/projects";
 import type { Document } from "@contentful/rich-text-types";
+import { apiServer } from "@/trpc/server";
+import { ProjectViewer } from "@/components/project-view";
 
 // Generate metadata for SEO & OG
 export async function generateMetadata({ params }: { params: { id: string } }): Promise<Metadata> {
@@ -19,40 +21,32 @@ export async function generateMetadata({ params }: { params: { id: string } }): 
       description: `Details about ${project.title}`,
       images: img
         ? [
-            {
-              url: img.url,
-              width: img.width,
-              height: img.height,
-            },
-          ]
+          {
+            url: img.url,
+            width: img.width,
+            height: img.height,
+          },
+        ]
         : [],
     },
   };
 }
 
 // Render project page
-export default async function ProjectPage({ params }: { params: { id: string } }) {
-  const project = await getProjectById(params.id);
-  if (!project) return <p>Project not found</p>;
+const Page = async ({ params }: { params: { id: string } }) => {
 
-  const richTextContent: Document =
-    typeof project.content === "string" ? JSON.parse(project.content) : project.content;
+  const project = await apiServer.projects.getById.query({ id: params.id })
+
+  if (!project) return <div>Not found</div>;
+  if (!project.content) return <div>Not found</div>;
 
   return (
-    <main className="max-w-3xl mx-auto p-6">
-      <h1 className="text-3xl font-bold mb-4">{project.title}</h1>
-
-      {project.cover_image && (
-        <Image
-          src={project.cover_image.url}
-          alt={project.title}
-          width={project.cover_image.width}
-          height={project.cover_image.height}
-          className="w-full h-auto rounded-lg mb-6"
-          priority
-        />
-      )}
-
-    </main>
+    <ProjectViewer
+      title={project.title}
+      cover={`https:${project.cover_image?.url}`}
+      content={project.content}
+    />
   );
 }
+
+export default Page

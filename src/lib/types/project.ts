@@ -1,8 +1,9 @@
+import { Document } from '@contentful/rich-text-types';
 
 export interface ProjectType {
   id: string;
   title: string;
-  content?: string; // If it's rich text JSON, change this to Document
+  content?: Document; // If it's rich text JSON, change this to Document
   cover_image?: ImageType;
 }
 

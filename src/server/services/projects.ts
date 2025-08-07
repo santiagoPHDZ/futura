@@ -23,6 +23,7 @@ export async function getProjects(): Promise<ProjectType[]> {
         id: item.sys.id,
         title: item.fields.title as string,
         cover_image: formatImage(item.fields.cover_image),
+        content: item.fields.content as any
     }));
 }
 
@@ -34,5 +35,6 @@ export async function getProjectById(id: string): Promise<ProjectType | null> {
         id: entry.sys.id,
         title: entry.fields.title as string,
         cover_image: formatImage(entry.fields.cover_image),
+        content: entry.fields.content as any
     };
 }
