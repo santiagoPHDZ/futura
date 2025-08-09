@@ -11,7 +11,7 @@ export async function getProjects(): Promise<ProjectType[]> {
     return entries.items.map((item: any) => ({
         id: item.fields.id as string,
         title: item.fields.title as string,
-        year: item.fields.year as string,
+        year: item.fields.year as number,
         cover_image: formatContentfulImage(item.fields.cover_image),
         content: item.fields.content as any
     }));
@@ -32,7 +32,7 @@ export async function getProjectById(id: string): Promise<ProjectType | null> {
     return {
         id: entry.fields.id as string,
         title: entry.fields.title as string,
-        year: entry.fields.year as string,
+        year: entry.fields.year as number,
         cover_image: formatContentfulImage(entry.fields.cover_image),
         content: entry.fields.content as any
     };
