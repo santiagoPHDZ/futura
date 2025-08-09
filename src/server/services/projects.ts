@@ -4,7 +4,7 @@ import { ProjectType } from "@/lib/types/project";
 export async function getProjects(): Promise<ProjectType[]> {
     const entries = await client.getEntries({
         content_type: "projects",
-        order: ["-sys.createdAt"],
+        order: ["-fields.created_at"],
         include: 1
     });
 
