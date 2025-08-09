@@ -17,11 +17,11 @@ const ROUTES = [
         newWindow: false,
         href: "/",
     },
-    // {
-    //     label: "About",
-    //     newWindow: false,
-    //     href: "/about",
-    // },
+    {
+        label: "About",
+        newWindow: false,
+        href: "/about",
+    },
     {
         label: "LinkedIn",
         newWindow: true,
@@ -40,7 +40,8 @@ const NavBar = () => {
     return (
         <nav className={cn("fixed top-0 z-50 backdrop-blur-md w-full flex items-center justify-center", isSidebarOpen ? "border-none bg-transparent" : " bg-background/80 ")}>
             <div className="w-full flex items-center justify-between h-14 px-4">
-                <div className="flex items-center justify-center ">
+                
+                
                     <Link href="/" className="">
                         <Image
                             src="/logo.png"
@@ -50,8 +51,6 @@ const NavBar = () => {
                             className="h-4 w-auto"
                         />
                     </Link>
-
-                </div>
 
                 <div className="  flex space-x-3 pt-2">
 
