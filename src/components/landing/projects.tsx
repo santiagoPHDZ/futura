@@ -14,7 +14,7 @@ export default function Projects() {
   if (!projects?.length) return <p>No projects found</p>;
 
   return (
-    <section className="max-w-xl px-4 mx-auto pt-16 flex flex-col gap-12 w-full">
+    <section className="max-container px-4 mx-auto pt-16 flex flex-col gap-12 w-full">
       <div className="grid grid-cols-1 gap-8 w-full pt-8">
         {projects.map((project) => (
           <ProjectCard key={project.id} project={project} />

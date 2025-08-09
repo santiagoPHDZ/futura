@@ -133,7 +133,7 @@ module.exports = {
 		function ({ addComponents }: PluginAPI) {
 			addComponents({
 				'.max-container': {
-					'@apply max-w-2xl md:max-w-4xl': {},
+					'@apply max-w-5xl': {},
 				},
 			})
 		},
