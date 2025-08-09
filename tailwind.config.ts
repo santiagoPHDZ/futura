@@ -19,7 +19,7 @@ module.exports = {
 		},
 		extend: {
 			fontFamily: {
-				header: ['var(--font-clash)', 'sans-serif'],
+				header: ['var(--font-nasa)', 'sans-serif'],
 			},
 			willChange: {
 				'opacity-transform': 'opacity, transform'
@@ -137,14 +137,14 @@ module.exports = {
 				},
 			})
 		},
-		function ({ addComponents }: PluginAPI) {
-			addComponents({
-				'.font-header': {
-					fontFamily: 'var(--font-clash), sans-serif',
-					wordSpacing: '0.25em',  // same as your config
-					letterSpacing: '0.08em'
-				},
-			})
-		},
+		// function ({ addComponents }: PluginAPI) {
+		// 	addComponents({
+		// 		'.font-header': {
+		// 			fontFamily: 'var(--font-nasa), sans-serif',
+		// 			wordSpacing: '0.1em',  // same as your config
+		// 			letterSpacing: '0.05em'
+		// 		},
+		// 	})
+		// },
 	],
 }

@@ -5,6 +5,7 @@ import { getProjectById } from "@/server/services/projects";
 import type { Document } from "@contentful/rich-text-types";
 import { apiServer } from "@/trpc/server";
 import { ProjectViewer } from "@/components/project-view";
+import Hero from "@/components/landing/projects/hero";
 
 // Generate metadata for SEO & OG
 export async function generateMetadata({ params }: { params: { id: string } }): Promise<Metadata> {
@@ -41,11 +42,21 @@ const Page = async ({ params }: { params: { id: string } }) => {
   if (!project.content) return <div>Not found</div>;
 
   return (
-    <ProjectViewer
-      title={project.title}
-      cover={`https:${project.cover_image?.url}`}
-      content={project.content}
-    />
+   <div className="flex flex-col w-full mx-auto space-y-12 overflow-hidden items-center justify-center pb-12">
+
+            <Hero project={project} />
+
+            <section className="max-container px-4 w-full space-y-12">
+
+                {/* <Details details={{
+                    year: "2025",
+                    location: "United Arab Emirates",
+                    status: "Completed",
+                    client: "Sheikh Zayed Housing Program"
+                }} /> */}
+            </section>
+
+        </div >
   );
 }
 

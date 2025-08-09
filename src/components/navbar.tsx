@@ -44,9 +44,9 @@ const NavBar = () => {
                     <Link href="/" className="">
                         <Image
                             src="/logo.png"
-                            alt="SANT PADILLA"
-                            width={396}
-                            height={105}
+                            alt="FUTURA"
+                            width={158}
+                            height={25}
                             className="h-4 w-auto"
                         />
                     </Link>

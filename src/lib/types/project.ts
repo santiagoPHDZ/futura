@@ -5,6 +5,7 @@ export interface ProjectType {
   title: string;
   content?: Document; // If it's rich text JSON, change this to Document
   cover_image?: ImageType;
+  year?: number;
 }
 
 export interface ImageType {

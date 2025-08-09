@@ -14,7 +14,7 @@ const Layout = ({ children }: { children: React.ReactNode }) => {
     return (
         <main className="">
 
-            <div className=" pt-8">
+            <div className="">
                 <NavBar />
                 <div className="w-full ">
                     {children}

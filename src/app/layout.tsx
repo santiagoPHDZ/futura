@@ -11,13 +11,11 @@ import { Toaster } from '@/components/ui/toaster';
 
 // Metadata
 export const metadata: Metadata = {
-  title: 'Sant Padilla',
+  title: 'FUTURA Corp',
+  description: "We belive in the future."
 }
 
-import { Inter } from 'next/font/google'
-const inter = Inter({ subsets: ["latin"] })
-
-import { clashDisplay } from '@/lib/fonts'
+import { nasaDisplay } from '@/lib/fonts'
 
 
 export default function RootLayout({
@@ -26,7 +24,7 @@ export default function RootLayout({
   children: React.ReactNode
 }) {
   return (
-    <html lang="en" className={`${clashDisplay.variable}`}>
+    <html lang="en" className={`${nasaDisplay.variable}`}>
       <TRPCReactProvider cookies={cookies().toString()}>
         <body className={`${GeistSans.className}`}>
           <ThemeProvider
