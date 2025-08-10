@@ -53,7 +53,7 @@ function ProjectCard({ project }: { project: ProjectType }) {
               >
                 <Image
                   src={img.url}
-                  alt={project.title}
+                  alt={project.name}
                   width={img.width}
                   height={img.height}
                   unoptimized
@@ -66,9 +66,9 @@ function ProjectCard({ project }: { project: ProjectType }) {
 
         <div className="pt-2 flex justify-between items-center">
           <h3 className="text-base font-light group-hover:underline underline-offset-2">
-            {project.title}
+            {project.name}
           </h3>
-          <p className="text-sm font-light text-muted-foreground">{project.year}</p>
+          <p className="text-sm font-light text-muted-foreground">{project.location}</p>
         </div>
       </motion.div>
     </Link>

@@ -18,14 +18,24 @@ const ROUTES = [
         href: "/",
     },
     {
-        label: "About",
+        label: "Technology",
         newWindow: false,
-        href: "/about",
+        href: "/tech",
+    },
+   {
+        label: "Developments",
+        newWindow: false,
+        href: "/evelopments",
     },
     {
-        label: "LinkedIn",
-        newWindow: true,
-        href: "https://www.linkedin.com/in/santiago-padilla-8bb022296/",
+        label: "Publications",
+        newWindow: false,
+        href: "/publications",
+    },
+    {
+        label: "Team",
+        newWindow: false,
+        href: "/team",
     },
 ]
 

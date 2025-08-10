@@ -16,9 +16,10 @@ const Details = ({ project }: { project: ProjectType }) => {
             transition={{ duration: 0.5, stagger: 0.25 }}
         >
             <div className="text-left w-full space-y-2 ">
+                <DetailLabel header='Client' label={project.client} />
+                <DetailLabel header='Location' label={project.location} />
+                <DetailLabel header='Status' label={project.status} />
                 <DetailLabel header='Year' label={`${project.year}`} />
-                <DetailLabel header='Status' label={project.title} />
-                <DetailLabel header='Client' label={project.id} />
             </div>
         </motion.div>
     )
@@ -29,7 +30,7 @@ export default Details;
 
 const DetailLabel = ({ header, label }: { header: string, label?: string }) => {
     return (
-        <div className={cn('flex  items-start justify-between space-y-1 w-full pt-1', header === "Year" ? "border-none" : "border-t")}>
+        <div className={cn('flex  items-start justify-between space-y-1 w-full pt-1', header === "Client" ? "border-none" : "border-t")}>
             <p className="uppercase w-full text-left font-normal text-secondary-text">
                 {header}
             </p>

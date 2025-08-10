@@ -37,13 +37,13 @@ const Hero = ({ project }: { project: ProjectType }) => {
                             <h5
                                 className="text-4xl font-header font-medium md:text-5xl lg:text-6xl text-left"
                             >
-                                {project.title}
+                                {project.name}
                             </h5>
 
                             <p
                                 className="text-xl font-light"
                             >
-                                {project.year}
+                                {project.location}
                             </p>
                         </div>
                     </div>

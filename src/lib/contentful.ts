@@ -1,6 +1,6 @@
 
 import { createClient } from 'contentful';
-import { ImageType } from './types/project';
+import { ImageType } from './types/image';
 
 export const client = createClient({
   space: process.env.CONTENTFUL_SPACE_ID as string,
