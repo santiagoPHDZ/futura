@@ -43,7 +43,7 @@ const Hero = ({ project }: { project: ProjectType }) => {
                             <p
                                 className="text-xl font-light"
                             >
-                                {project.location}
+                                {project.tagline ?? project.location}
                             </p>
                         </div>
                     </div>

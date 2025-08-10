@@ -11,6 +11,7 @@ export interface ProjectType {
   status?: string;
   client?: string;
   location?: string;
+  tagline?: string;
   created_at?: string;
   images?: ImageType[];
 }

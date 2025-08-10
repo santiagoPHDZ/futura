@@ -23,6 +23,7 @@ export async function getProjects(): Promise<ProjectType[]> {
             year: item.fields.year as number | undefined,
             status: item.fields.status as string | undefined,
             location: item.fields.location as string | undefined,
+            tagline: item.fields.tagline as string | undefined,
             client: item.fields.client as string | undefined,
             created_at: item.fields.created_at as string | undefined,
             images: imagesField
@@ -58,6 +59,7 @@ export async function getProjectById(id: string): Promise<ProjectType | null> {
         location: entry.fields.location as string | undefined,
         status: entry.fields.status as string | undefined,
         client: entry.fields.client as string | undefined,
+        tagline: entry.fields.tagline as string | undefined,
         created_at: entry.fields.created_at as string | undefined,
         images: imagesField
             ? imagesField

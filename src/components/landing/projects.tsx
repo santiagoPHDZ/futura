@@ -56,7 +56,6 @@ function ProjectCard({ project }: { project: ProjectType }) {
                   alt={project.name}
                   width={img.width}
                   height={img.height}
-                  unoptimized
                   className="object-cover w-full h-full rounded-lg  bg-accent"
                 />
               </motion.div>
