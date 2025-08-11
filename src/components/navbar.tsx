@@ -20,18 +20,18 @@ const ROUTES = [
     {
         label: "Technology",
         newWindow: false,
-        href: "/tech",
+        href: "/technology",
     },
    {
         label: "Developments",
         newWindow: false,
-        href: "/evelopments",
+        href: "/developments",
     },
-    {
-        label: "Publications",
-        newWindow: false,
-        href: "/publications",
-    },
+    // {
+    //     label: "Publications",
+    //     newWindow: false,
+    //     href: "/publications",
+    // },
     {
         label: "Team",
         newWindow: false,

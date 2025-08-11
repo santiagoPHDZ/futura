@@ -15,10 +15,10 @@ export async function generateMetadata({ params }: { params: { id: string } }): 
 
   return {
     title: project.name,
-    description: `Details about ${project.name}`,
+    description: `${project.name}`,
     openGraph: {
       title: project.name,
-      description: `Details about ${project.name}`,
+      description: `${project.name}`,
       images: img
         ? [
           {

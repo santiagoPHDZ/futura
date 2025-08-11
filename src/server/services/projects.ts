@@ -1,3 +1,4 @@
+
 import { client, formatContentfulImage } from "@/lib/contentful";
 import { ImageType } from "@/lib/types/image";
 import { ProjectType } from "@/lib/types/project";

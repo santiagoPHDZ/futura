@@ -1,6 +1,5 @@
 
 import type { Metadata } from 'next'
-import { GeistSans } from 'geist/font/sans';
 
 import '@/styles/globals.css'
 import { cookies } from "next/headers";
@@ -18,6 +17,9 @@ export const metadata: Metadata = {
 import { nasaDisplay } from '@/lib/fonts'
 
 
+import { Inter } from 'next/font/google'
+const inter = Inter({ subsets: ["latin"] })
+
 export default function RootLayout({
   children,
 }: {
@@ -26,7 +28,7 @@ export default function RootLayout({
   return (
     <html lang="en" className={`${nasaDisplay.variable}`}>
       <TRPCReactProvider cookies={cookies().toString()}>
-        <body className={`${GeistSans.className}`}>
+        <body className={`${inter.className}`}>
           <ThemeProvider
             attribute="class"
             defaultTheme="light"
